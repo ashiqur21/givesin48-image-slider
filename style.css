@@ -75,6 +75,10 @@
   cursor: pointer;
   position: relative;
 }
+.slide-card:nth-last-child(1),
+.slide-card:nth-last-child(2) {
+  display: none;
+}
 
 .slider-dot-group .active::before {
   content: "";
