@@ -5,15 +5,13 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+.slide-section {
+  overflow: hidden;
+}
 .container {
   max-width: 1468px;
   margin: 0px auto;
   font-family: "Poppins", sans-serif !important;
-}
-
-.sliders {
-  overflow-x: hidden;
 }
 
 .slider-content {
@@ -21,110 +19,32 @@
   justify-content: start;
   align-items: start;
   transition: transform 0.5s ease-in-out;
-  color: #fff;
 }
 
 .slide-card {
   position: relative;
-  min-width: calc(100% / 3) !important;
+  min-width: 620px !important;
   height: 100%;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
-  padding: 0 5px;
+  padding: 0 15px;
+}
+.slide-card:first-child {
+  padding-left: 0;
 }
 .slide-card-inner {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-
-  padding: 20px;
-  border-radius: 20px;
-  border: 2px solid #c57eeea0;
-  background-color: transparent;
-  background-image: linear-gradient(135deg, #0d0a1b 0%, #1f1f1f 100%);
-}
-
-.designation {
-  font-size: 16px;
-  font-weight: 400;
-}
-
-.slide-card-inner:hover {
-  border: 2px solid #af32f6;
-  transition: all 0.3s ease-in-out;
-}
-
-.divider {
-  width: 10%;
-  height: 2px !important;
-  background-color: #af32f6;
-  margin: 0 auto;
-  transition: all 0.3s ease-in-out;
-}
-
-.slide-card:hover .divider {
-  width: 100%;
-  height: 2px;
-  background-color: #af32f6;
-  transition: all 0.3s ease-in-out;
-}
-
-.slider-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-bottom: 10px;
-}
-
-.slider-card-and-title-group {
-  display: flex;
-  gap: 10px;
-}
-
-.slider-card-image {
-  width: 80px;
-  height: 80px;
-}
-
-.slider-card-image img {
   width: 100%;
 }
-
-.slider-card-title {
-  font-size: 20px;
-  font-weight: 700;
-}
-
-.slider-description {
-  font-style: italic;
-}
-
-.slide-card i {
-  color: #1b1b1b;
-  transition: all 0.3s ease-in-out;
-}
-
-.slide-card:hover i {
-  color: #af32f6;
-  transition: all 0.3s ease-in-out;
-}
-
-.slider-icons-group i {
-  font-size: 14px;
-}
-
-.slidercard-social-icon {
-  width: 40px;
-  height: 40px;
-}
-
-.slidercard-social-icon img {
+.slide-image-box {
   width: 100%;
-  padding: 5px;
+  height: 600px;
 }
-
+.slide-image-box img {
+  width: 100%;
+  height: 100%;
+}
 .slider-dot-and-next-prev-button-group {
-  width: 60%;
+  width: 100%;
   margin-left: auto;
   display: flex;
   justify-content: space-between;
@@ -137,15 +57,15 @@
   display: flex;
   justify-content: start;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
 }
 
 .slider-dot.active {
-  background-color: #af32f6 !important;
+  background-color: #222222 !important;
 }
 
 .slider-dot {
-  background-color: #cbcbcb;
+  background-color: #a7a7a7;
   width: 10px;
   height: 10px;
   border-radius: 100%;
@@ -156,17 +76,6 @@
   position: relative;
 }
 
-.slider-dot::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 20px;
-  height: 20px;
-  border: 1px solid #cbcbcb;
-  border-radius: 100%;
-}
 .slider-dot-group .active::before {
   content: "";
   position: absolute;
@@ -175,7 +84,6 @@
   transform: translate(-50%, -50%);
   width: 20px;
   height: 20px;
-  border: 1px solid #af32f6;
   border-radius: 100%;
 }
 .next-prev-button-group {
@@ -195,13 +103,11 @@
 }
 
 .next {
-  color: white;
-  background-color: #af32f6;
+  color: rgb(0, 0, 0);
 }
 
 .prev {
-  color: white;
-  background-color: #af32f6;
+  color: rgb(0, 0, 0);
 }
 
 @media screen and (min-width: 0px) and (max-width: 520px) {
@@ -210,22 +116,23 @@
     flex-direction: column;
     gap: 20px;
   }
-
+  .slide-card {
+    position: relative;
+    min-width: 338px !important;
+    height: 100%;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    padding: 0 5px;
+  }
+  .slide-image-box {
+    width: 100%;
+    height: 338px;
+  }
   .slider-dot {
     background-color: #cbcbcb;
     width: 8px;
     height: 8px;
   }
-
-  .slider-dot::before {
-    content: "";
-    position: absolute;
-    width: 18px;
-    height: 18px;
-    border: 1px solid #cbcbcb;
-    border-radius: 100%;
-  }
-
   .next-prev-button-group button {
     border: none;
     width: 35px;

@@ -41,9 +41,9 @@ function updateActiveDot(index) {
 // Update button colors
 function updateButtonColors() {
   prevButton.style.backgroundColor =
-    currentSlideIndex === 0 ? "#222020" : "#af32f6";
+    currentSlideIndex === 0 ? "#fff" : "#fff";
   nextButton.style.backgroundColor =
-    currentSlideIndex >= slides.length - 3 ? "#222020" : "#af32f6";
+    currentSlideIndex >= slides.length - 3 ? "#fff" : "#fff";
 }
 
 // Slide left
